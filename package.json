@@ -1,0 +1,19 @@
+{
+  "name": "MBR",
+  "version": "0.0.1",
+  "description": "MBR",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Zihao Wu",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "body-parser": "^1.15.0",
+    "bunyan": "^1.5.1",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "jquery-ui": "^1.10.5",
+    "node-sass-middleware": "^0.9.6"
+  }
+}

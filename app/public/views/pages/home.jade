@@ -1,0 +1,22 @@
+.broker_info
+	.apply_mortage
+		h1 Apply for a Mortage
+		input(ng-model="broker_first_name", placeholder="First Name", style="top:30px;")
+		input(ng-model="broker_last_name", placeholder="Last Name", style="top:60px;")
+		input(ng-model="broker_MID_id", placeholder="MIS ID", style="top:90px;")
+		input(ng-model="broker_M_value", placeholder="Mortage Value", style="top:120px;")
+		.button-container
+			a(ng-show="showSubmit", ng-click="submit(broker_first_name, broker_last_name, broker_MID_id,broker_M_value)", style="left: calc(50% - 40px);") Submit
+			p(ng-show="submitDone") {{ submitDoneYes }}
+			p(ng-show="submitDone") {{ mortage_id }}
+	.check_status
+		h1 Check Status
+		input(ng-model="last_name_broker", placeholder="Last Name", style="top:40px;")
+		input(ng-model="MID_id_broker", placeholder="Mortage ID", style="top:70px;")
+		a(ng-click="getState(last_name_broker, MID_id_broker)", ng-show="showStatus") Check Status
+		h1(style="font-size:15px;margin-top: 140px;", ng-show="showState") {{ broker_state }}
+		a(style="top: 120px;left: calc(50% - 46.5px);", ng-click="download()", ng-show="allDone") Download
+
+
+
+
