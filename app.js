@@ -96,7 +96,8 @@ app.post('/broker_ins', function(req,res){
 			collection.update( 
 	  				 { location:"Halifax", 
 	  				 	'brokers.first_name':broker_first_name,
-	  				 	'brokers.last_name':broker_last_name},
+	  				 	'brokers.last_name':broker_last_name,
+	  				 	'brokers.Mort_id':broker_mort_id},
 	  				 { $set: { "brokers.$.Ins":
 	  				 					{ 
 	  				 						"insured_value":broker_insured_value,
