@@ -62,8 +62,6 @@ app.post('/broker_emp', function(req,res){
 	  	var broder_start_employment_date = req.body.start_employment_date;
 			collection.update( 
 	  				 { location:"Halifax", 
-	  				 	'brokers.first_name':broker_first_name,
-	  				 	'brokers.last_name':broker_last_name,
 	  				 	'brokers.Mort_id':broker_mort_id },
 	  				 { $set: { "brokers.$.Info":
 	  				 					{ 
