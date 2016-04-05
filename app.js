@@ -87,16 +87,13 @@ app.post('/broker_ins', function(req,res){
 	    console.dir(err);
 	  } else {
 	  	var collection = db.collection('mortgage_broker');
-	  	var broker_first_name = req.body.first_name;
-	  	var broker_last_name = req.body.last_name;
+	  	
 	  	var broker_insured_value = req.body.insured_value;
 	  	var broder_deductible = req.body.deductible;
-			
+		var broker_mort_id = req.body.Mort_id;	
 			//
 			collection.update( 
 	  				 { location:"Halifax", 
-	  				 	'brokers.first_name':broker_first_name,
-	  				 	'brokers.last_name':broker_last_name,
 	  				 	'brokers.Mort_id':broker_mort_id},
 	  				 { $set: { "brokers.$.Ins":
 	  				 					{ 
